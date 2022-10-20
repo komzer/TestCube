@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class One : MonoBehaviour
 {
+    public Text textTime;
+    public Text textSpeed;
+    public Text textDistance;
     float   speed=2f, distance = 10f;
     float timeCreate = 1f;
     public GameObject box;
@@ -14,7 +17,34 @@ public class One : MonoBehaviour
     
     void Update()
     {
-        
+        textTime.text = timeCreate.ToString();
+        textSpeed.text = speed.ToString();
+        textDistance.text = distance.ToString();
+    }
+
+    public void UpTimeClick()
+    {
+        timeCreate++;
+    }
+    public void DownTimeClick()
+    {
+        timeCreate--;
+    }
+    public void UpSpeedClick()
+    {
+        speed++;
+    }
+    public void DownSpeedClick()
+    {
+        speed--;
+    }
+    public void UpDistanceClick()
+    {
+        distance++;
+    }
+    public void DownDistanceClick()
+    {
+        distance--;
     }
     void Start()
     {
